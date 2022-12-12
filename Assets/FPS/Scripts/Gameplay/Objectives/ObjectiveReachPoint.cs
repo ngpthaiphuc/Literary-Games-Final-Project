@@ -9,6 +9,8 @@ namespace Unity.FPS.Gameplay
         [Tooltip("Visible transform that will be destroyed once the objective is completed")]
         public Transform DestroyRoot;
 
+        public GameObject nextObjective;
+
         void Awake()
         {
             if (DestroyRoot == null)
@@ -28,6 +30,7 @@ namespace Unity.FPS.Gameplay
 
                 // destroy the transform, will remove the compass marker if it has one
                 Destroy(DestroyRoot.gameObject);
+                nextObjective.SetActive(true);
             }
         }
     }

@@ -8,11 +8,25 @@ namespace Unity.FPS.Gameplay
         [Tooltip("Item to pickup to complete the objective")]
         public GameObject ItemToPickup;
 
+        public GameObject nextObjective;
+
         protected override void Start()
         {
+            // if(priorObjective == null){
             base.Start();
 
             EventManager.AddListener<PickupEvent>(OnPickupEvent);
+            // } else{
+            //     base.LimitedStart();
+            //     if(priorObjective.IsCompleted){
+            //         DisplayMessageEvent displayMessage = Events.DisplayMessageEvent;
+            //         displayMessage.Message = Title;
+            //         displayMessage.DelayBeforeDisplay = 0.0f;
+            //         EventManager.Broadcast(displayMessage);
+
+            //         EventManager.AddListener<PickupEvent>(OnPickupEvent);
+            //     }
+            // }
         }
 
         void OnPickupEvent(PickupEvent evt)
@@ -33,6 +47,7 @@ namespace Unity.FPS.Gameplay
         void OnDestroy()
         {
             EventManager.RemoveListener<PickupEvent>(OnPickupEvent);
+            nextObjective.SetActive(true);
         }
     }
 }

@@ -112,6 +112,7 @@ MonoBehaviour:
   PathReachingRadius: 2
   OrientationSpeed: 10
   DeathDuration: 0
+  DetectionRange: 20
   SwapToNextWeapon: 0
   DelayAfterWeaponSwap: 0
   EyeColorMaterial: {fileID: 2100000, guid: e6fdfd4e017234d43ac116abee8fa90a, type: 2}
@@ -154,7 +155,7 @@ MonoBehaviour:
   DeathVfxSpawnPoint: {fileID: 381893446485871685}
   LootPrefab: {fileID: 2529580269645609534, guid: 9973c412032becb4ca116ca08be62edf,
     type: 3}
-  DropRate: 1
+  DropRate: 0.5
   PathReachingRangeColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   AttackRangeColor: {r: 1, g: 0, b: 0, a: 1}
   DetectionRangeColor: {r: 0, g: 0, b: 1, a: 1}

@@ -23,6 +23,11 @@ namespace Unity.FPS.Game
         public static event Action<Objective> OnObjectiveCreated;
         public static event Action<Objective> OnObjectiveCompleted;
 
+        // protected virtual void LimitedStart()
+        // {
+        //     OnObjectiveCreated?.Invoke(this);
+        // }
+
         protected virtual void Start()
         {
             OnObjectiveCreated?.Invoke(this);
